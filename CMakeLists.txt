@@ -4,10 +4,16 @@ cmake_minimum_required(VERSION 3.6)
 # solution
 project(sampleSolution)
 
+# include gtest settings
+include("cmake/gtest.cmake")
+
 SET(TARGET_NAME sampleTarget)
 
 # build TARGET_NAME from source code
-add_executable(${TARGET_NAME} main.cpp)
+cxx_test(${TARGET_NAME} main.cpp)
 
-# set TARGET_NAME as start up property
-set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT ${TARGET_NAME})
+if(MSVC)
+    # set TARGET_NAME as start up property
+    set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT ${TARGET_NAME})
+endif(MSVC)
+
