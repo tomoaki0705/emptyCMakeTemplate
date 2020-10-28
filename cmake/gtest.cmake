@@ -31,10 +31,9 @@ ExternalProject_Add(gtest_ext
         "-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}"
         "-DCMAKE_INSTALL_PREFIX=${THIRD_PARTY_DIR}/"
         "-DBUILD_GMOCK=OFF"
-        "-DCMAKE_DEBUG_POSTFIX=d"
 )
 set(GTEST_INCLUDE_DIRS
-    "${THIRD_PARTY_DIR}/gtest-src/include"
+    "${THIRD_PARTY_DIR}/include"
 )
 
 if(WIN32)
