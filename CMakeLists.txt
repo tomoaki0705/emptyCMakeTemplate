@@ -21,6 +21,7 @@ SET(TEST_NAME sampleTest)
 cxx_test(${TEST_NAME} main.cpp)
 add_executable(${TARGET_NAME} main.cpp)
 target_include_directories(${TARGET_NAME} PUBLIC ${THIRD_PARTY_DIR}/include)
+target_include_directories(${TEST_NAME}   PUBLIC ${THIRD_PARTY_DIR}/include)
 
 if(MSVC)
     # set TARGET_NAME as start up property
