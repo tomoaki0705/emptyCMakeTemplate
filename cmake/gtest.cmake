@@ -9,7 +9,7 @@ ExternalProject_Add(gtest_ext
     SOURCE_DIR "${CMAKE_BINARY_DIR}/third-party/gtest-src"
     INSTALL_COMMAND "${CMAKE_COMMAND}"
         --build . 
-	--target install
+        --target install
     CMAKE_ARGS "${gtest_cmake_args}"
         "-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}"
         "-DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/third-party/"
